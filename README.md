@@ -19,7 +19,7 @@ This repository contains a step-by-step guide on setting up a home lab with a do
 [Provide a brief introduction to your home lab setup, its purpose, and benefits.]
 
 ## Prerequisites
-[Describe the hardware and software requirements for the home lab setup.]
+[]
 
 ## Installation and Configuration
 [Provide step-by-step instructions for installing and configuring the domain controller and client machine.]
