@@ -1,6 +1,6 @@
-# Home Lab Setup: Domain Controller and Client Machine
+# Building an Integrated Home Network with Centralized User Authentication
 
-This repository contains a step-by-step guide on setting up a home lab with a domain controller and client machine. The guide provides detailed instructions and configurations to help you create your own home lab environment.
+This repository contains a step-by-step guide on setting up a home lab network with a domain controller and client machine. The guide provides detailed instructions and configurations to help you create your own home lab environment.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -16,10 +16,13 @@ This repository contains a step-by-step guide on setting up a home lab with a do
 - [License](#license)
 
 ## Introduction
-[Provide a brief introduction to your home lab setup, its purpose, and benefits.]
+This guide demonstrates how to set up a home lab environment with a domain controller and client machine. By creating a domain controller, you can centralize user management and resource access control, providing a more organized and secure network for your home lab.
 
-## Prerequisites
-[]
+## Tools Used
+- Vmware (or any virtualization technology)
+- Windows Server 2019
+- Powershell (user account creation)
+- Client Machine (Windows 10)
 
 ## Installation and Configuration
 [Provide step-by-step instructions for installing and configuring the domain controller and client machine.]
