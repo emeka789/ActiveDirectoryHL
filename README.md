@@ -4,7 +4,7 @@ This repository contains a step-by-step guide on setting up a home lab network w
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Prerequisites](#prerequisites)
+- [Tools Used](#tools-used)
 - [Installation and Configuration](#installation-and-configuration)
   - [Step 1: Install Windows Server](#step-1-install-windows-server)
   - [Step 2: Configure the Domain Controller](#step-2-configure-the-domain-controller)
