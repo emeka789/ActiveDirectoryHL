@@ -1,6 +1,6 @@
 # Building an Integrated Home Network with Centralized User Authentication
 
-This repository contains a step-by-step guide on setting up a home lab network with a domain controller and client machine. The guide provides detailed instructions and configurations to help you create your own home lab environment.
+This is a step-by-step guide on setting up a home lab network with a domain controller and client machine. The guide shows instructions on how you can create your own home lab environment.
 
 ## Table of Contents
 - [Introduction](#introduction)
