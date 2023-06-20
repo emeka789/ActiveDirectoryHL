@@ -27,10 +27,12 @@ This guide demonstrates how to set up a home lab environment with a domain contr
 ### Step 1: Install Windows Server 2019
 - Download the Windows Server ISO file from the Microsoft website.
 - Install Windows Server on the dedicated machine, following the on-screen instructions
+![Screenshot 2023-06-15 021225](https://github.com/emeka789/images/assets/99328320/345c7588-71a1-4a54-97e6-a37ffd52d371)
 - Perform initial configurations like setting the language, time zone, and administrator password.
 
 ### Step 2: Configure the Domain Controller
-- Assign a static IP address to the domain controller machine.
+- Assign a static IP address, Subnet mask, & DNS to the domain controller machine.
+![Screenshot 2023-06-19 130514](https://github.com/emeka789/images/assets/99328320/447b41a0-4bd5-41ee-aa30-b8a75851a658)
 - Install the Active Directory Domain Services (AD DS) role on the Windows Server.
 - Promote the server to a domain controller by creating a new forest and domain.
 - Configure DNS and DHCP services on the domain controller machine.
