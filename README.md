@@ -34,19 +34,24 @@ This guide demonstrates how to set up a home lab environment with a domain contr
 - Assign a static IP address, Subnet mask, & DNS to the domain controller machine.
 ![Screenshot 2023-06-19 130514](https://github.com/emeka789/images/assets/99328320/447b41a0-4bd5-41ee-aa30-b8a75851a658)
 - Install the Active Directory Domain Services (AD DS) role on the Windows Server.
+![Screenshot 2023-06-20 023837](https://github.com/emeka789/images/assets/99328320/3f10e8ea-a509-4220-811e-d10eac8356a7)
 - Promote the server to a domain controller by creating a new forest and domain.
 - Configure DNS and DHCP services on the domain controller machine.
 - Create user accounts, groups, and organizational units (OUs) as needed.
+![Screenshot 2023-06-20 030134](https://github.com/emeka789/images/assets/99328320/cd5d4542-186a-4df7-9765-382e19ff42f9)
 
 ### Step 3: Install the Client Machine
 - Install the appropriate version of Windows client OS on the client machine.
 - Join the client machine to the domain created in Step 2.
 - Configure network settings on the client machine to ensure connectivity with the domain controller.
+![Screenshot 2023-06-20 031608](https://github.com/emeka789/images/assets/99328320/7483dbbe-de72-40b9-b033-8880cb35f361)
 
 ### Step 4: Test the Domain Controller and Client Connection
 - Log in to the client machine using a domain user account.
 - Verify domain user permissions and access to shared resources.
 - Perform basic tests like pinging the domain controller and accessing network shares.
+![Screenshot 2023-06-20 031927](https://github.com/emeka789/images/assets/99328320/f7def568-94e3-4f49-aa13-a88ded8341f4)
+![Screenshot 2023-06-20 031830](https://github.com/emeka789/images/assets/99328320/9f5d211d-1aee-4c4d-aba2-d4b78201c956)
 
 ### Step 5: Additional Considerations (optional)
 - Configure Group Policies to enforce security settings and apply specific configurations.
