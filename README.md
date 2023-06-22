@@ -1,6 +1,6 @@
 # Building an Integrated Home Network with Centralized User Authentication
 
-This is a step-by-step guide on setting up a home lab network with a domain controller and client machine. The guide shows instructions on how you can create your own home lab environment.
+This is a step-by-step guide to setting up a home lab network with a domain controller and client machine. The guide shows instructions on how you can create your own home lab environment.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -14,7 +14,7 @@ This is a step-by-step guide on setting up a home lab network with a domain cont
 - [Conclusion](#conclusion)
 
 ## Introduction
-This guide demonstrates how to set up a home lab environment with a domain controller and client machine. By creating a domain controller, you can centralize user management and resource access control, providing a more organized and secure network for your home lab.
+This guide demonstrates how to set up a home lab environment with a domain controller and client machine. With this setup, you can centralize user management and resource access control, providing a more organized and secure network for your home lab.
 
 ## Tools Used
 - Vmware (or any virtualization technology)
