@@ -19,7 +19,6 @@ This guide demonstrates how to set up a home lab environment with a domain contr
 ## Tools Used
 - Vmware (or any virtualization technology)
 - Windows Server 2019
-- Powershell (bulk user account provisioning)
 - Client Machine (Windows 10)
 
 ## Installation and Configuration
