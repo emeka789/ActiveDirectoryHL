@@ -30,7 +30,7 @@ This guide demonstrates how to set up a home lab environment with a domain contr
 - Perform initial configurations like setting the language, time zone, and administrator password.
 
 ### Step 2: Configure the Domain Controller
-- Assign a static IP address, Subnet mask, & DNS to the domain controller machine.
+- Assign a static IP address, subnet mask, & DNS to the domain controller machine.
 ![Screenshot 2023-06-19 130514](https://github.com/emeka789/images/assets/99328320/447b41a0-4bd5-41ee-aa30-b8a75851a658)
 - Install the Active Directory Domain Services (AD DS) role on the Windows Server.
 ![Screenshot 2023-06-20 023837](https://github.com/emeka789/images/assets/99328320/3f10e8ea-a509-4220-811e-d10eac8356a7)
