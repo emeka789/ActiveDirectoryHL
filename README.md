@@ -1,27 +1,21 @@
-# Building an Integrated Home Network with Centralized User Authentication
+# Active Directory Simulation using Vmware
 
-This is a step-by-step guide to setting up a home lab network with a domain controller and client machine. The guide shows instructions on how you can create your own home lab environment.
+## Summary
+In this project, Vmware was used to simulate a corporate environment consisting of a client machine (Win 10), domain controller hosting Active Directory (Win Server 2019), as well as other network services needed to segment the network (NAT/RAS, DNS, DHCP). A custom Powershell script was used to create 1000 fictional users each given a username and password for clients to access the environment. Active directory was then leveraged to create Organizational Units, Group Policies, and Security groups to structure, centralize and manage user accounts, computers, and other network resources within the simulated corporate environment.
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Tools Used](#tools-used)
-- [Installation and Configuration](#installation-and-configuration)
-  - [Step 1: Install Windows Server](#step-1-install-windows-server-2019)
-  - [Step 2: Configure the Domain Controller](#step-2-configure-the-domain-controller)
-  - [Step 3: Install the Client Machine](#step-3-install-the-client-machine)
-  - [Step 4: Test the Domain Controller and Client Connection](#step-4-test-the-domain-controller-and-client-connection)
-  - [Step 5: Additional Considerations](#step-5-additional-considerations-optional)
-- [Conclusion](#conclusion)
-
-## Introduction
-This guide demonstrates how to set up a home lab environment with a domain controller and client machine. With this setup, you can centralize user management and resource access control, providing a more organized and secure network for your home lab.
-
-## Tools Used
-- Vmware (or any virtualization technology)
+## Tools and Technologies Used
+- Vmware
 - Windows Server 2019
 - Client Machine (Windows 10)
+- Active Directory
+- Active Directory Domain Services
+- Domain Naming System (DNS)
+- Dynamic Host Configuration Protocol (DHCP)
+- Network Address Translation (NAT)
+- Powershell
+- File and Storage Services
 
-## Installation and Configuration
+## Windows Server 2019 and Active Directory Configuration
 
 ### Step 1: Install Windows Server 2019
 - Download the Windows Server ISO file from the Microsoft website.
