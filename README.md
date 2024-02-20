@@ -29,11 +29,14 @@ Powershell scripts were then used to create 1000 fictional users as well as user
 
 ## Joining Client Machine (Win 10) to the Domain
 For this, a Windows ISO image was used to install the Windows 10 operating system on the VMware virtual machine with the Network Adapter set to internal to ensure all network traffic flows through the domain controller. An account was created to access the machine and connected to mydomain.com pinged to verify the connection. The connection was verified by logging in with credentials of users created using the Powershell script.
+
+
 ![Screenshot 2023-06-20 031927](https://github.com/emeka789/images/assets/99328320/f7def568-94e3-4f49-aa13-a88ded8341f4)
 ![Screenshot 2023-06-20 031830](https://github.com/emeka789/images/assets/99328320/9f5d211d-1aee-4c4d-aba2-d4b78201c956)
 
+![Screenshot 2023-06-11 205123](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/6d79402f-773a-4146-a3de-81493dfaf4f6)
 
+The same process can be used to log in to additional users created using mulitple VMs. Within the DC, Active Directory was checked to see if client populated correctly.
 
-## Conclusion
-Congratulations! You have successfully set up a home lab with a domain controller and client machine. This environment will enable you to learn, test, and experiment with various networking and security configurations. Feel free to explore further possibilities and expand your home lab setup.
+![Screenshot 2023-06-12 175138](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/dfa7f250-7995-4220-b33d-0f8432b9922c)
 
