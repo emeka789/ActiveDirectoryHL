@@ -22,7 +22,8 @@ Two network adapters were used to separate internal and external traffic.
 The following roles and services for Active Directory and the Domain Controller were configured
 ![286363729-25d70bde-a64a-4de3-bf8d-4ade4bd69542](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/2b2684f2-b08e-4e7b-a9ca-bc6db37f2534)
 
-Powershell scripts were then used to create 1000 fictional users as well as 
+Powershell scripts were then used to create 1000 fictional users as well as user creation within the Active Directory environment.
+![Screenshot 2023-06-10 122014](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/20edc126-173a-42b0-ac63-6ba445a0f5ec)
 
 ![Screenshot 2023-06-20 031927](https://github.com/emeka789/images/assets/99328320/f7def568-94e3-4f49-aa13-a88ded8341f4)
 ![Screenshot 2023-06-20 031830](https://github.com/emeka789/images/assets/99328320/9f5d211d-1aee-4c4d-aba2-d4b78201c956)
