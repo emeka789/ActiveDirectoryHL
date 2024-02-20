@@ -25,13 +25,14 @@ The following roles and services for Active Directory and the Domain Controller 
 Powershell scripts were then used to create 1000 fictional users as well as user creation within the Active Directory environment.
 ![Screenshot 2023-06-10 122014](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/20edc126-173a-42b0-ac63-6ba445a0f5ec)
 
+![Screenshot 2023-06-10 183311](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/74b3dcd0-4668-4ba3-80dd-ce7b608f6026)
+
+## Joining Client Machine (Win 10) to the Domain
+For this, a Windows ISO image was used to install the Windows 10 operating system on the VMware virtual machine with the Network Adapter set to internal to ensure all network traffic flows through the domain controller. An account was created to access the machine and connected to mydomain.com pinged to verify the connection. The connection was verified by logging in with credentials of users created using the Powershell script.
 ![Screenshot 2023-06-20 031927](https://github.com/emeka789/images/assets/99328320/f7def568-94e3-4f49-aa13-a88ded8341f4)
 ![Screenshot 2023-06-20 031830](https://github.com/emeka789/images/assets/99328320/9f5d211d-1aee-4c4d-aba2-d4b78201c956)
 
-### Step 5: Additional Considerations (optional)
-- Configure Group Policies to enforce security settings and apply specific configurations.
-- Set up file sharing and folder redirection for centralized file storage and access.
-- Integrate additional services such as DNS, DHCP, or Certificate Authority to enhance the home lab setup.
+
 
 ## Conclusion
 Congratulations! You have successfully set up a home lab with a domain controller and client machine. This environment will enable you to learn, test, and experiment with various networking and security configurations. Feel free to explore further possibilities and expand your home lab setup.
