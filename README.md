@@ -1,7 +1,7 @@
 # Active Directory Simulation using Vmware
 ![Copy of Log ana](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/dd1d99dc-b7b0-44c5-88e1-c6b6a661fe03)
 ## Summary
-In this project, Vmware was used to simulate a corporate environment consisting of a client machine (Win 10), domain controller hosting Active Directory (Win Server 2019), as well as other network services needed to segment the network (NAT/RAS, DNS, DHCP). A custom Powershell script was used to create 1000 fictional users each given a username and password for clients to access the environment. Active directory was then leveraged to create Organizational Units, Group Policies, and Security groups to structure, centralize and manage user accounts, computers, and other network resources within the simulated corporate environment.
+In this project, Vmware was used to simulate a corporate environment consisting of a client machine (Win 10), domain controller hosting Active Directory (Win Server 2019), as well as other network services needed to segment the network (NAT/RAS, DNS, DHCP). A custom Powershell script was used to create 1000 fictional users each given a username and password for clients to access the environment. Active directory was then leveraged to create organizational units (OU), group policies (GP), and security groups (SG) to structure, centralize, and manage user accounts, computers, and other network resources within the simulated corporate environment.
 
 ## Tools and Technologies Used
 - Vmware
@@ -16,33 +16,14 @@ In this project, Vmware was used to simulate a corporate environment consisting 
 - File and Storage Services
 
 ## Windows Server 2019 and Active Directory Configuration
+Two network adapters were used to separate internal and external traffic.
+![Screenshot 2023-06-20 031608](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/d56b7c86-48e2-42ec-9d84-7e447dacfb09)
 
-### Step 1: Install Windows Server 2019
-- Download the Windows Server ISO file from the Microsoft website.
-- Install Windows Server on the dedicated machine, following the on-screen instructions
-![Screenshot 2023-06-15 021225](https://github.com/emeka789/images/assets/99328320/345c7588-71a1-4a54-97e6-a37ffd52d371)
-- Perform initial configurations like setting the language, time zone, and administrator password.
+The following roles and services for Active Directory and the Domain Controller were configured
+![286363729-25d70bde-a64a-4de3-bf8d-4ade4bd69542](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/2b2684f2-b08e-4e7b-a9ca-bc6db37f2534)
 
-### Step 2: Configure the Domain Controller
-- Assign a static IP address, subnet mask, & DNS to the domain controller machine.
-![Screenshot 2023-06-19 130514](https://github.com/emeka789/images/assets/99328320/447b41a0-4bd5-41ee-aa30-b8a75851a658)
-- Install the Active Directory Domain Services (AD DS) role on the Windows Server.
-![Screenshot 2023-06-20 023837](https://github.com/emeka789/images/assets/99328320/3f10e8ea-a509-4220-811e-d10eac8356a7)
-- Promote the server to a domain controller by creating a new forest and domain.
-- Configure DNS and DHCP services on the domain controller machine.
-- Create user accounts, groups, and organizational units (OUs) as needed.
-![Screenshot 2023-06-20 030134](https://github.com/emeka789/images/assets/99328320/cd5d4542-186a-4df7-9765-382e19ff42f9)
+Powershell scripts were then used to create 1000 fictional users as well as 
 
-### Step 3: Install the Client Machine
-- Install the appropriate version of Windows client OS on the client machine.
-- Join the client machine to the domain created in Step 2.
-- Configure network settings on the client machine to ensure connectivity with the domain controller.
-![Screenshot 2023-06-20 031608](https://github.com/emeka789/images/assets/99328320/7483dbbe-de72-40b9-b033-8880cb35f361)
-
-### Step 4: Test the Domain Controller and Client Connection
-- Log in to the client machine using a domain user account.
-- Verify domain user permissions and access to shared resources.
-- Perform basic tests like pinging the domain controller and accessing network shares.
 ![Screenshot 2023-06-20 031927](https://github.com/emeka789/images/assets/99328320/f7def568-94e3-4f49-aa13-a88ded8341f4)
 ![Screenshot 2023-06-20 031830](https://github.com/emeka789/images/assets/99328320/9f5d211d-1aee-4c4d-aba2-d4b78201c956)
 
