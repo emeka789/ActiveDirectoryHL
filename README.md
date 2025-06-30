@@ -15,10 +15,17 @@ The objective of this project was to create a secure enterprise network where us
 - Powershell
 - File and Storage Services
 
-## Windows Server 2019 and Active Directory Configuration
+## Step 1: Install Virtual Machine
 Two network adapters were used to separate internal and external traffic.
 ![Screenshot 2023-06-20 031608](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/d56b7c86-48e2-42ec-9d84-7e447dacfb09)
 
+## Step 2: Install Windows Server 2019 
+## Step 3: Install Active Directory
+## Step 4: Create Users in Active Directory with PowerShell
+## Step 5: Configure Role-Bases Access Control (RBAC) with Security Groups
+## Step 6: Automate Group Assignments with PowerShell
+## Step 7: Apply Group Policy and Simulate User Offboarding
+## Step 8: View Audit logs for User + Group Changes
 The following roles and services for Active Directory and the Domain Controller were configured
 ![286363729-25d70bde-a64a-4de3-bf8d-4ade4bd69542](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/2b2684f2-b08e-4e7b-a9ca-bc6db37f2534)
 
