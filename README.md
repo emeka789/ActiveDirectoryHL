@@ -1,7 +1,7 @@
 # Active Directory Simulation using Vmware
 ![Copy of Log ana](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/dd1d99dc-b7b0-44c5-88e1-c6b6a661fe03)
 ## Summary
-In this project, Vmware was used to simulate a corporate environment consisting of a client machine (Win 10), domain controller hosting Active Directory (Windows Server 2019), as well as other network services needed to segment the network (NAT/RAS, DNS, DHCP). A custom Powershell script was used to create 1000 fictional users each given a username and password for clients to access the environment. Active directory was then leveraged to create organizational units (OU), group policies (GP), and security groups (SG) to structure, centralize, and manage user accounts, computers, and other network resources within the simulated corporate environment.
+The objective of this project was to create a secure enterprise network where user identity, access control, and centralized management are implemented and automated. This was done by configuring VMware to simulate a corporate environment consisting of client machines (Win 10), a Windows domain controller hosting Active Directory, as well as other network services needed to segment the network (NAT/RAS, DNS, DHCP). To simulate a real-world identity workload, I used a PowerShell script that generated 1,000 realistic user accounts w/ associated credentials. Active directory was then used to create organizational units (OU), group policies (GP), and security groups (SG) to structure, centralize, and manage user accounts, computers, and other network resources within the simulated corporate environment.
 
 ## Tools and Technologies Used
 - Vmware
