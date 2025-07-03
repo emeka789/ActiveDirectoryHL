@@ -15,13 +15,32 @@ The objective of this project was to create a secure enterprise network where us
 - Powershell
 - File and Storage Services
 
-## Step 1: Install Virtual Machine
-Two network adapters were used to separate internal and external traffic.
-![Screenshot 2023-06-20 031608](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/d56b7c86-48e2-42ec-9d84-7e447dacfb09)
+## 🖥️ Step 1: Create Virtual Machine
+#### 1.1 Create New Virtual machine
+![Image](https://github.com/user-attachments/assets/9cf15001-ed0a-4050-912f-485ff8b56b8b) 
 
-## Step 2: Install Windows Server 2019 
-## Step 3: Install Active Directory
+#### 1.2 Go through TYPICAL installation process and install VM
+![Image](https://github.com/user-attachments/assets/b1965ca9-6af1-4b14-841e-a28592036b81)
+
+## 🛠️ Step 2: Install Windows Server 2019 
+#### 2.1 Start VM & Install OS
+![Image](https://github.com/user-attachments/assets/096bfc48-eee6-405f-a959-0d35aa248888)
+
+## 🧰 Step 3: Install Active Directory
+#### Start --> Server Manager --> Add Roles and Features
+#### Before you begin --> Next 
+#### Role-based or feature-based installation & Server Selection --> Next
+#### Server Roles --> Check Active Directory Domain Services ✅
+![Image](https://github.com/user-attachments/assets/294acb47-b0ce-4445-9427-7955ab1938c8)
+![Image](https://github.com/user-attachments/assets/018c54c7-b388-45ef-9ebe-1935e8d596ec)
+#### Install! ✔️
+
 ## Step 4: Create Users in Active Directory with PowerShell
+#### 4.1 Create text file with list of names of users
+![Image](https://github.com/user-attachments/assets/c6adfb67-c241-406b-bcf5-41c67c07ac44)
+#### 4.2 Use this [Powershell](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) script to add new users from text file
+![Image](https://github.com/user-attachments/assets/4be3eb9a-2430-4af2-85e0-fa0417bf073b)
+
 ## Step 5: Configure Role-Bases Access Control (RBAC) with Security Groups
 ## Step 6: Automate Group Assignments with PowerShell
 ## Step 7: Apply Group Policy and Simulate User Offboarding
@@ -47,3 +66,5 @@ The same process can be used to log in to additional users created using mulitpl
 
 ![Screenshot 2023-06-12 175138](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/dfa7f250-7995-4220-b33d-0f8432b9922c)
 
+
+![Screenshot 2023-06-20 031608](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/d56b7c86-48e2-42ec-9d84-7e447dacfb09)
