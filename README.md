@@ -1,19 +1,15 @@
-# Active Directory Simulation using Vmware
+# Active Directory IAM Lifecycle Simulation & Automation using Powershell
 ![Copy of Log ana](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/dd1d99dc-b7b0-44c5-88e1-c6b6a661fe03)
-## Summary
-The objective of this project was to create a secure enterprise network where user identity, access control, and centralized management are implemented and automated. This was done by configuring VMware to simulate a corporate environment consisting of client machines (Win 10), a Windows domain controller hosting Active Directory, as well as other network services needed to segment the network (NAT/RAS, DNS, DHCP). To simulate a real-world identity workload, I used a PowerShell script that generated 1,000 realistic user accounts w/ associated credentials. Active directory was then used to create organizational units (OU), group policies (GP), and security groups (SG) to structure, centralize, and manage user accounts, computers, and other network resources within the simulated corporate environment.
+## 🎯 Summary 
+The goal of the porject is to build a virtual lab using VMware and Windows Server to simulate an enterprise IT environment. This was done by configuring client machines (Win 10), a domain controller hosting Active Directory, and other network services needed to segment the network (NAT/RAS, DNS, DHCP). Active directory was then used to create organizational units (OU), group policies (GP), and security groups (SG) to structure, centralize, and manage user accounts and other network resources.
 
-## Tools and Technologies Used
+## 🛠️ Tools and Technologies Used
 - Vmware
 - Windows Server 2019
 - Client Machine (Windows 10)
 - Active Directory
 - Active Directory Domain Services
-- Domain Naming System (DNS)
-- Dynamic Host Configuration Protocol (DHCP)
-- Network Address Translation (NAT)
 - Powershell
-- File and Storage Services
 
 ## 🖥️ Step 1: Create Virtual Machine
 #### 1.1 Create New Virtual machine
@@ -35,23 +31,37 @@ The objective of this project was to create a secure enterprise network where us
 ![Image](https://github.com/user-attachments/assets/018c54c7-b388-45ef-9ebe-1935e8d596ec)
 #### Install! ✔️
 
-## Step 4: Create Users in Active Directory with PowerShell
+## 🫂 Step 4: Create Users in Active Directory with PowerShell
 #### 4.1 Create text file with list of names of users
 ![Image](https://github.com/user-attachments/assets/c6adfb67-c241-406b-bcf5-41c67c07ac44)
-#### 4.2 Use this [Powershell](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) script to add new users from text file
+#### 4.2 Use this [Powershell](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) script to add new users from text file to Organizational Unit --> USERS
 ![Image](https://github.com/user-attachments/assets/4be3eb9a-2430-4af2-85e0-fa0417bf073b)
-
-## Step 5: Configure Role-Bases Access Control (RBAC) with Security Groups
-## Step 6: Automate Group Assignments with PowerShell
+#### 4.3 Users have now been added to Organizational Unit 🥳
+![Screenshot 2023-06-10 183311](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/74b3dcd0-4668-4ba3-80dd-ce7b608f6026)
+### After creating users, let's manage what resources have access to 🪨
+## Step 5: Configure Role-Based Access Control (RBAC) with Security Groups
+#### 5.1 Update CSV file
+To automate Group Assignments using Powershell, you can update the text file to include categories for example...
+#### First Name, Last Name, Username & Department
+#### 5.2 Use this script in Powershell to add users to their specified Group
+`
+Ps C:\Users\Administrator> Import-Csv "C:\Users\Administrator\Desktop\names/txt | ForEach-Object {
+  $username = $_.Username
+	$group = $_.Department + "_Group"
+	Add-ADGroupMember -Identity $group -Members $username
+}
+`
+#### 5.3 Run Script & verify group membership
+![Image](https://github.com/user-attachments/assets/0c72bc58-8391-47d2-ba77-167171962050)
+## Step 6: 
 ## Step 7: Apply Group Policy and Simulate User Offboarding
 ## Step 8: View Audit logs for User + Group Changes
 The following roles and services for Active Directory and the Domain Controller were configured
 ![286363729-25d70bde-a64a-4de3-bf8d-4ade4bd69542](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/2b2684f2-b08e-4e7b-a9ca-bc6db37f2534)
 
-Powershell scripts were then used to create 1000 fictional users as well as user creation within the Active Directory environment.
 ![Screenshot 2023-06-10 122014](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/20edc126-173a-42b0-ac63-6ba445a0f5ec)
 
-![Screenshot 2023-06-10 183311](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/74b3dcd0-4668-4ba3-80dd-ce7b608f6026)
+
 
 ## Joining Client Machine (Win 10) to the Domain
 For this, a Windows ISO image was used to install the Windows 10 operating system on the VMware virtual machine with the Network Adapter set to internal to ensure all network traffic flows through the domain controller. An account was created to access the machine and connected to mydomain.com pinged to verify the connection. The connection was verified by logging in with credentials of users created using the Powershell script.
