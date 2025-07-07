@@ -56,34 +56,29 @@ Ps C:\Users\Administrator> Import-Csv "C:\Users\Administrator\Desktop\names/txt 
 ![Image](https://github.com/user-attachments/assets/0c72bc58-8391-47d2-ba77-167171962050)
 ## 👮 Step 6: Apply Group Policy Objects & Simulate User Offboarding
 #### 6.1 Apply Group Policy Object to restrict access to the Control Panel
-##### Open Group Policy Management from Start Menu -> Expand `lab.local > Domains > lab.local`
-##### Right Click lab.local & Select "Create a GPO in this domain and Link it here"
-##### Name it: Disable_ControlPanel_IT
+##### Open Group Policy Management from Start Menu -> Expand `cyber.range > Domains > cyber.range`
+##### Right Click cyber.range & Select "Create a GPO in this domain and Link it here"
+##### Name it: Disable_ControlPanel_JuniorAnalysts
+<img width="892" height="636" alt="Image" src="https://github.com/user-attachments/assets/806301ed-8b56-4fac-b767-5391edecf202" /> 
+
 ##### Right click new GPO -> Edit -> User Configuration -> Policies -> Administrative Templates -> Control Panel
 ##### Select "Prohibit access to Control Panel and PC Settings" & Enable
 ![Image](https://github.com/user-attachments/assets/9205bf56-aa49-4724-8363-23df61c6eb81)
+
 ##### Choose OK! ✅
-#### 6.2 Target the GPO to the USER Group only
 
-The following roles and services for Active Directory and the Domain Controller were configured
-![286363729-25d70bde-a64a-4de3-bf8d-4ade4bd69542](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/2b2684f2-b08e-4e7b-a9ca-bc6db37f2534)
+#### 6.2 Target the GPO to the Junior Analyst Group only
+##### Open Group Policy Management from Start Menu -> Select 'Disable_ControlPanel_JuniorAnalyst'
+##### Go to Delegation tab -> Choose Advanced & Remove Authenticated Users
+##### Add Users -> Choose Allow for Read & Apply Group Policy -> OK! 
+<img width="819" height="648" alt="Image" src="https://github.com/user-attachments/assets/3832d0b5-8381-4e6f-ae41-5eaf8f62103d" />
 
-![Screenshot 2023-06-10 122014](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/20edc126-173a-42b0-ac63-6ba445a0f5ec)
+#### 6.3 To Simulate offboarding, let's disable & move a User
+##### Open Active Directory Users and Computers -> Right click user's name and choose Disable Account
+##### Open User's Properties & Choose Memeber of Tab -> Remove from Junior Analyst Group
+##### Create a new Organizational Unit called TerminatedUsers & Drag user into new OU
 
-
-
-## Joining Client Machine (Win 10) to the Domain
-For this, a Windows ISO image was used to install the Windows 10 operating system on the VMware virtual machine with the Network Adapter set to internal to ensure all network traffic flows through the domain controller. An account was created to access the machine and connected to mydomain.com pinged to verify the connection. The connection was verified by logging in with credentials of users created using the Powershell script.
-
-
-![Screenshot 2023-06-20 031927](https://github.com/emeka789/images/assets/99328320/f7def568-94e3-4f49-aa13-a88ded8341f4)
-![Screenshot 2023-06-20 031830](https://github.com/emeka789/images/assets/99328320/9f5d211d-1aee-4c4d-aba2-d4b78201c956)
-
-![Screenshot 2023-06-11 205123](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/6d79402f-773a-4146-a3de-81493dfaf4f6)
-
-The same process can be used to log in to additional users created using mulitple VMs. Within the DC, Active Directory was checked to see if client populated correctly.
-
-![Screenshot 2023-06-12 175138](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/dfa7f250-7995-4220-b33d-0f8432b9922c)
-
-
-![Screenshot 2023-06-20 031608](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/d56b7c86-48e2-42ec-9d84-7e447dacfb09)
+## 🎊 Step 7: Complete!
+#### You've now handled the IAM User Lifecycle from End to End
+You've completed the setup of Active Directory environment using Windows Server 2019. This lab simulates a real-world enterprise environment where user identities, roles and access were managed using Windows Server and Active Directory. 
+Through automation with PowerShell and targeted use of GPOs, it demonstrates how to efficiently manage user provisioning, enforce security policies, and streamline deprovisioning processes. It's a practical foundation for anyone looking to understand IAM fundamentals in a Windows-based environmen
