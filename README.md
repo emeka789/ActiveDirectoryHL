@@ -27,6 +27,7 @@ The goal of the porject is to build a virtual lab using VMware and Windows Serve
 #### Before you begin --> Next 
 #### Role-based or feature-based installation & Server Selection --> Next
 #### Server Roles --> Check Active Directory Domain Services ✅
+#### Features --> Next --> Next ✅
 ![Image](https://github.com/user-attachments/assets/294acb47-b0ce-4445-9427-7955ab1938c8)
 ![Image](https://github.com/user-attachments/assets/018c54c7-b388-45ef-9ebe-1935e8d596ec)
 #### Install! ✔️
@@ -53,9 +54,17 @@ Ps C:\Users\Administrator> Import-Csv "C:\Users\Administrator\Desktop\names/txt 
 `
 #### 5.3 Run Script & verify group membership
 ![Image](https://github.com/user-attachments/assets/0c72bc58-8391-47d2-ba77-167171962050)
-## Step 6: 
-## Step 7: Apply Group Policy and Simulate User Offboarding
-## Step 8: View Audit logs for User + Group Changes
+## 👮 Step 6: Apply Group Policy Objects & Simulate User Offboarding
+#### 6.1 Apply Group Policy Object to restrict access to the Control Panel
+##### Open Group Policy Management from Start Menu -> Expand `lab.local > Domains > lab.local`
+##### Right Click lab.local & Select "Create a GPO in this domain and Link it here"
+##### Name it: Disable_ControlPanel_IT
+##### Right click new GPO -> Edit -> User Configuration -> Policies -> Administrative Templates -> Control Panel
+##### Select "Prohibit access to Control Panel and PC Settings" & Enable
+![Image](https://github.com/user-attachments/assets/9205bf56-aa49-4724-8363-23df61c6eb81)
+##### Choose OK! ✅
+#### 6.2 Target the GPO to the USER Group only
+
 The following roles and services for Active Directory and the Domain Controller were configured
 ![286363729-25d70bde-a64a-4de3-bf8d-4ade4bd69542](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/2b2684f2-b08e-4e7b-a9ca-bc6db37f2534)
 
