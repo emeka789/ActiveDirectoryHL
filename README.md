@@ -1,4 +1,4 @@
-# Active Directory IAM Lifecycle Simulation & Automation using Powershell
+# IAM Lifecycle Simulation w/ Active Directory
 ![Copy of Log ana](https://github.com/emeka789/ActiveDirectoryHL/assets/99328320/dd1d99dc-b7b0-44c5-88e1-c6b6a661fe03)
 ## 🎯 Summary 
 The goal of the porject is to build a virtual lab using VMware and Windows Server to simulate an enterprise IT environment. This was done by configuring client machines (Win 10), a domain controller hosting Active Directory, and other network services needed to segment the network (NAT/RAS, DNS, DHCP). Active directory was then used to create organizational units (OU), group policies (GP), and security groups (SG) to structure, centralize, and manage user accounts and other network resources.
