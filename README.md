@@ -81,4 +81,4 @@ Ps C:\Users\Administrator> Import-Csv "C:\Users\Administrator\Desktop\names/txt 
 ## 🎊 Step 7: Complete!
 #### You've now handled the IAM User Lifecycle from End to End
 You've completed the setup of Active Directory environment using Windows Server 2019. This lab simulates a real-world enterprise environment where user identities, roles and access were managed using Windows Server and Active Directory. 
-Through automation with PowerShell and targeted use of GPOs, it demonstrates how to efficiently manage user provisioning, enforce security policies, and streamline deprovisioning processes. It's a practical foundation for anyone looking to understand IAM fundamentals in a Windows-based environmen
+Through automation with PowerShell and targeted use of GPOs, it demonstrates how to efficiently manage user provisioning, enforce security policies, and streamline deprovisioning processes. It's a practical foundation for anyone looking to understand IAM fundamentals in a Windows-based environment
